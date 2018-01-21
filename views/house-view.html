@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 center-block">
+      <h2 class="h2style well"><i class="fa fa-home" aria-hidden="true"></i> House Details</h2>
+      <br>
+      <div class="appSection  center-block text-center">
+        <div class="allDataTable table-responsive text-center">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input-group btn-block" style="margin: 1% auto; ">
+                  <a class="btn btn-lg btn-primary btn-block" ng-href="#/">Back to Homepage</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <table class="table table-bordered table-striped table-hover table-condensed">
+            <thead>
+              <tr>
+                <th colspan="2" class="text-center">
+                  <span ng-show="currentHouse.house.name.length > 0">[House Name: {{currentHouse.house.name}}] </span>
+                  <span ng-show="currentHouse.house.name.length < 1 ">House Name: "Not Available"</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  House Region:
+                </td>
+                <td>
+                  <span ng-show="currentHouse.house.region.length > 0">{{currentHouse.house.region}}</span>
+                  <span ng-show="currentHouse.house.region.length < 1 ">"Not Available"</span>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  House Coat Of Arms:
+                </td>
+                <td>
+                  <span ng-show="currentHouse.house.coatOfArms.length > 0">{{currentHouse.house.coatOfArms}}</span>
+                  <span ng-show="currentHouse.house.coatOfArms.length < 1 ">"Not Available"</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  House Words: </td>
+                <td>
+                  <span ng-show="currentHouse.house.words.length > 0">{{currentHouse.house.words}}</span>
+                  <span ng-show="currentHouse.house.words.length < 1">"Not Available"</span>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  House Founded:
+                </td>
+                <td>
+                  <span ng-show="currentHouse.house.founded.length > 0">{{currentHouse.house.founded}}</span>
+                  <span ng-show="currentHouse.house.founded.length < 1 ">"Not Available"</span>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  House DiedOut:
+                </td>
+                <td>
+                  <span ng-show="currentHouse.house.diedOut.length > 0">{{currentHouse.house.diedOut}}</span>
+                  <span ng-show="currentHouse.house.diedOut.length < 1 ">"Not Available"</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  House Cadet Branches:
+                </td>
+                <td>
+                  <span ng-repeat="cadetBranch in currentHouse.house.cadetBranches">{{$index +1}}.<a ng-href="{{cadetBranch.replace('https://anapioficeandfire.com/api/houses','#/view-house')}}" title="View Details">
+    "{{cadetBranch.replace('https://anapioficeandfire.com/api/houses','view-house')}}" </a><br> <br></span>
+                  <span ng-show="currentHouse.house.cadetBranches.length < 1 ">"Not Available"</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  [House Sworn Members]
+                </td>
+                <td>
+                  <span ng-show="swornMember in currentHouse.house.swornMembers">{{ currentHouse.house.swornMembers.length }} </span>
+                  <span ng-show="currentHouse.house.swornMembers.length < 1 ">"Not Available"</span>
+
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <a href="#/" class="btn btn-primary btn-primary">Go Back</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+        <!--  allDatatable end -->
+        <div>
+          <!-- col end -->
+        </div>
+        <!--  row end -->
+      </div>
+    </div>
+
+    <!-- conteiner-fluid end -->
