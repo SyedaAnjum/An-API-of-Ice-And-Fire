@@ -1,20 +1,20 @@
 myApp.directive('booksData', function() {
   return {
     restrict: "E",
-    templateUrl: "views/all-books.html",
+    templateUrl: "template/all-books.html",
   }
 });
 
 myApp.directive('housesData', function() {
   return {
     restrict: "E",
-    templateUrl: "views/all-houses.html",
+    templateUrl: "template/all-houses.html",
   }
 });
 myApp.directive('charactersData', function() {
   return {
     restrict: "E",
-    templateUrl: "views/all-characters.html",
+    templateUrl: "template/all-characters.html",
   }
 });
 
@@ -25,7 +25,7 @@ myApp.directive('toggle', function() {
     restrict: 'A',
     link: function(scope, element, attrs) {
       if (attrs.toggle == "tooltip") {
-        $(element).tooltip();
+        element.tooltip();
       }
       if (attrs.toggle == "popover") {
         $(element).popover();
